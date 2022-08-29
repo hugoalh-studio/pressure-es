@@ -1,0 +1,36 @@
+{
+	"name": "@hugoalh/pressure",
+	"version": "1.0.0",
+	"description": "A module to convert pressure units.",
+	"keywords": [
+		"conversion",
+		"convert",
+		"pressure",
+		"scale",
+		"scales",
+		"unit",
+		"units"
+	],
+	"homepage": "https://github.com/hugoalh-studio/pressure-nodejs#readme",
+	"bugs": {
+		"url": "https://github.com/hugoalh-studio/pressure-nodejs/issues"
+	},
+	"license": "MIT",
+	"author": "hugoalh",
+	"main": "./lib/main.js",
+	"module": "./lib/main.mjs",
+	"exports": {
+		"import": "./lib/main.mjs",
+		"require": "./lib/main.js"
+	},
+	"types": "./lib/main.d.ts",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hugoalh-studio/pressure-nodejs.git"
+	},
+	"engines": {
+		"node": ">= 6.9.0",
+		"npm": ">= 3.10.8"
+	},
+	"private": false
+}

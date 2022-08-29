@@ -1,0 +1,5 @@
+*
+!lib/**
+!LICENSE.md
+!package.json
+!README.md
