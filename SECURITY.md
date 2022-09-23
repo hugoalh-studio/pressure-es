@@ -11,9 +11,9 @@
 > | ❌{🐛} | **No (Issue):** Not supported due to confirmed contains bugs and/or issues. |
 > | ❌{🧓} | **No (Old):** Not supported due to too old. |
 
-| **Versions** | **Status** | **Target - NodeJS** | **Target - NPM** |
+| **Releases / Tags / Versions** | **Status** | **Target - NodeJS** | **Target - NPM** |
 |:-:|:-:|:-:|:-:|
-| v1.0.X | L | >= v6.9.0 | >= v3.10.8 |
+| v1.0.X | L | >= v6.9.0 | *N/A* |
 
 ## Report Vulnerability
 
@@ -43,7 +43,7 @@ Please provide as much as you can to help the security vulnerability report supe
 - Your account's platform (e.g.: GitHub, GitLab, ...).
 - Your account's username (e.g.: `@octocat`).
 - Project's ID or repository URI.
-  - Project's ID is displayed at the top part of readme (i.e.: `README` file), below the project display name (i.e.: header), inside a code block.
+  - Project's ID is displayed at the top part of the Readme (file: `README.md`), below the project display name (i.e.: header), inside a code block.
 - Affected branches, commits, tags, and/or versions.
   - Versions must be listed as supported.
   - For multiple versions, you can use version range instead.
