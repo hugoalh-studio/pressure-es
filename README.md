@@ -31,7 +31,7 @@ Units of pressure are from [Wikipedia - Pressure measurement - Units](https://en
 | Technical atmosphere | `at` | `TechnicalAtmosphere` / `technicalAtmosphere` | $P_{Pa} = P_{at} \times 98066.5$ | $P_{at} = P_{Pa} \div 98066.5$ |
 | Torr | `Torr` | `Torr` / `torr` | $P_{Pa} = P_{Torr} \times {101325 \over 760}$ | $P_{Torr} = P_{Pa} \div {101325 \over 760}$ |
 
-### 📋 Note
+### 📋 Notice
 
 This module uses the built in JavaScript `Number` type, which is a floating point number with a limited precision of 64 bits, about 16 digits. Floating point numbers round-off errors can occur during calculations:
 
