@@ -83,7 +83,7 @@ import Pressure from "@hugoalh/pressure";
 <li>
 
 ```ts
-@constructor(value: number, unit?: string = "Pa"): Pressure
+@constructor(value: number, unit: string = "Pa"): Pressure
 ```
 
 </li>
