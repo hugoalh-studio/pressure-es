@@ -22,14 +22,28 @@ A NodeJS module to convert pressure units.
 
 Units of pressure are from [Wikipedia - Pressure measurement - Units](https://en.wikipedia.org/wiki/Pressure_measurement#Units).
 
-| **Unit** | **Symbol (\*: Exclusive)** | **Camel Case Name** | **Formula of Convert to SI Unit** | **Formula of Convert from SI Unit** |
-|:-:|:-:|:-:|:--|:--|
-| Pascal ***\[SI\]*** | `Pa` | `Pascal` / `pascal` |  |  |
-| Bar | `bar` | `Bar` / `bar` | $P_{Pa} = P_{bar} \times 10^{5}$ | $P_{bar} = P_{Pa} \div 10^{5}$ |
-| Pound per square inch | `psi` | `PoundPerSquareInch` / `poundPerSquareInch` | $P_{Pa} = P_{psi} \times {0.45359237 \times 9.80665 \over 0.0254^{2}}$ | $P_{psi} = P_{Pa} \div {0.45359237 \times 9.80665 \over 0.0254^{2}}$ |
-| Standard atmosphere | `atm` | `Atmosphere` / `atmosphere` / `StandardAtmosphere` / `standardAtmosphere` | $P_{Pa} = P_{atm} \times 101325$ | $P_{atm} = P_{Pa} \div 101325$ |
-| Technical atmosphere | `at` | `TechnicalAtmosphere` / `technicalAtmosphere` | $P_{Pa} = P_{at} \times 98066.5$ | $P_{at} = P_{Pa} \div 98066.5$ |
-| Torr | `Torr` | `Torr` / `torr` | $P_{Pa} = P_{Torr} \times {101325 \over 760}$ | $P_{Torr} = P_{Pa} \div {101325 \over 760}$ |
+| **Unit** | **Symbol (\*: Exclusive)** | **Camel Case Name** |
+|:-:|:-:|:-:|
+| Pascal ***\[SI\]*** | `Pa` | `Pascal` / `pascal` |
+| Bar | `bar` | `Bar` / `bar` |
+| Pound per square inch | `psi` | `PoundPerSquareInch` / `poundPerSquareInch` |
+| Standard atmosphere | `atm` | `Atmosphere` / `atmosphere` / `StandardAtmosphere` / `standardAtmosphere` |
+| Technical atmosphere | `at` | `TechnicalAtmosphere` / `technicalAtmosphere` |
+| Torr | `Torr` | `Torr` / `torr` |
+
+<details>
+<summary><b>Conversion Formula</b></summary>
+
+| **Unit** | **To SI Unit** | **From SI Unit** |
+|:-:|:--|:--|
+| Pascal ***\[SI\]*** |  |  |
+| Bar | $P_{Pa} = P_{bar} \times 10^{5}$ | $P_{bar} = P_{Pa} \div 10^{5}$ |
+| Pound per square inch | $P_{Pa} = P_{psi} \times {0.45359237 \times 9.80665 \over 0.0254^{2}}$ | $P_{psi} = P_{Pa} \div {0.45359237 \times 9.80665 \over 0.0254^{2}}$ |
+| Standard atmosphere | $P_{Pa} = P_{atm} \times 101325$ | $P_{atm} = P_{Pa} \div 101325$ |
+| Technical atmosphere | $P_{Pa} = P_{at} \times 98066.5$ | $P_{at} = P_{Pa} \div 98066.5$ |
+| Torr | $P_{Pa} = P_{Torr} \times {101325 \over 760}$ | $P_{Torr} = P_{Pa} \div {101325 \over 760}$ |
+
+</details>
 
 ### 📋 Notice
 
