@@ -90,33 +90,17 @@ import Pressure from "@hugoalh/pressure";
 
 #### Class
 
-<ul>
-<li><code>Pressure</code></li>
-<ul>
-<li>
-
 ```ts
-@constructor(value: number, unit: string = "Pa"): Pressure
+Pressure(value: number, unit: string = "Pa"): Pressure;
+  static .difference(a: Pressure, b: Pressure): PressureDifference;
 ```
-
-</li>
-<li>
-
-```ts
-static difference(a: Pressure, b: Pressure): PressureDifference
-```
-
-</li>
-</ul>
-</ul>
-
 
 ### Example
 
 ```js
-new Pressure(1, "Bar").Pa
+new Pressure(1, "Bar").Pa;
 //=> 100000
 
-new Pressure(100000).Bar
+new Pressure(100000).Bar;
 //=> 1
 ```
