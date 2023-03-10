@@ -11,9 +11,9 @@
 > | ❌{🐛} | **No (Issue):** Not supported due to confirmed contains bugs and/or issues. |
 > | ❌{🧓} | **No (Old):** Not supported due to too old. |
 
-| **Versions** | **Status** | **Target - NodeJS** | **Target - NPM** |
-|:-:|:-:|:-:|:-:|
-| v1.0.X | L | >= v6.9.0 | *N/A* |
+| **Versions** | **Status** | **Target - NodeJS** |
+|:-:|:-:|:-:|
+| v1.0.X | L | >= v6.9.0 |
 
 ## Report Vulnerability
 

@@ -645,23 +645,29 @@
 .slugignore text
 .stylelintrc text
 .vimrc text eol=lf
-*copyright* text
-*readme* text
+authors text
 AUTHORS text
 browserslist text
 Cargo.lock text
+changelog text
 CHANGELOG text
+changes text
 CHANGES text
+contributing text
 CONTRIBUTING text
+copying text
 COPYING text
 copyright text
+COPYRIGHT text
 Dockerfile text
 DockerFile text
+install text
 INSTALL text
 license text
 LICENSE text
 makefile text
 Makefile text
+news text
 NEWS text
 package-lock.json text
 package.json text
@@ -669,6 +675,8 @@ pnpm-lock.yaml text
 Procfile text
 ProcFile text
 readme text
+README text
 schema.rb text diff=ruby
+todo text
 TODO text
 yarn.lock text
