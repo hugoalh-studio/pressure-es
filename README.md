@@ -91,8 +91,15 @@ import Pressure from "@hugoalh/pressure";
 #### Class
 
 ```ts
-Pressure(value: number, unit: string = "Pa"): Pressure;
-  static .difference(a: Pressure, b: Pressure): PressureDifference;
+new Pressure(value: number, unit: string = "Pa"): Pressure;
+  .at: number;
+  .atm: number;
+  .bar: number;
+  .Pa: number;
+  .psi: number;
+  .Torr: number;
+
+Pressure.difference(a: Pressure, b: Pressure): PressureDifference;
 ```
 
 ### Example
