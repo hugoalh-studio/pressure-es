@@ -83,7 +83,7 @@ const Pressure = require("@hugoalh/pressure");
 ##### ModuleJS
 
 ```js
-import Pressure from "@hugoalh/pressure";
+import Pressure from "@hugoalh/pressure";// Default Import
 ```
 
 ### API
