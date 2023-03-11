@@ -15,7 +15,6 @@
 		"target": "ESNext"
 	},
 	"include": [
-		"./lib/main.js",
-		"./lib/main.mjs"
+		"./lib/main.js"
 	]
 }
