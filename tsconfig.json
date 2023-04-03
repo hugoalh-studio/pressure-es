@@ -10,7 +10,6 @@
 		"forceConsistentCasingInFileNames": true,
 		"module": "NodeNext",
 		"moduleResolution": "NodeNext",
-		"newLine": "crlf",
 		"target": "ESNext"
 	},
 	"include": [
