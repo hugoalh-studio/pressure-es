@@ -62,9 +62,7 @@ In most cases, round-off errors do not matter, they have no significant impact o
 
 ## 📚 Documentation
 
-### Getting Started
-
-#### Install
+### Target
 
 - NodeJS >= v6.9.0
 
@@ -72,18 +70,10 @@ In most cases, round-off errors do not matter, they have no significant impact o
 npm install @hugoalh/pressure
 ```
 
-#### Use
-
-##### CommonJS
-
 ```js
-const Pressure = require("@hugoalh/pressure");
-```
-
-##### ModuleJS
-
-```js
-import Pressure from "@hugoalh/pressure";// Default Import
+/* Either */
+const Pressure = require("@hugoalh/pressure");// [CommonJS] Require
+import Pressure from "@hugoalh/pressure";// [ModuleJS] Default Import
 ```
 
 ### API
