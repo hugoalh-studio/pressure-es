@@ -1,8 +1,7 @@
 # Pressure (NodeJS)
 
-[`Pressure.NodeJS`](https://github.com/hugoalh-studio/pressure-nodejs)
-
 ![License](https://img.shields.io/static/v1?label=License&message=MIT&style=flat-square "License")
+[![GitHub Repository](https://img.shields.io/badge/Repository-181717?logo=github&logoColor=ffffff&style=flat-square "GitHub Repository")](https://github.com/hugoalh-studio/pressure-nodejs)
 [![GitHub Stars](https://img.shields.io/github/stars/hugoalh-studio/pressure-nodejs?label=Stars&logo=github&logoColor=ffffff&style=flat-square "GitHub Stars")](https://github.com/hugoalh-studio/pressure-nodejs/stargazers)
 [![GitHub Contributors](https://img.shields.io/github/contributors/hugoalh-studio/pressure-nodejs?label=Contributors&logo=github&logoColor=ffffff&style=flat-square "GitHub Contributors")](https://github.com/hugoalh-studio/pressure-nodejs/graphs/contributors)
 [![GitHub Issues](https://img.shields.io/github/issues-raw/hugoalh-studio/pressure-nodejs?label=Issues&logo=github&logoColor=ffffff&style=flat-square "GitHub Issues")](https://github.com/hugoalh-studio/pressure-nodejs/issues)
@@ -62,7 +61,7 @@ In most cases, round-off errors do not matter, they have no significant impact o
 
 ## 📚 Documentation
 
-### Target
+### Getting Started
 
 - NodeJS >= v6.9.0
 
