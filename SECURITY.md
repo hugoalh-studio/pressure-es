@@ -13,6 +13,7 @@
 
 | **Versions** | **Status** | **Target - NodeJS** |
 |:-:|:-:|:-:|
+| v2.0.X | L | ^ v12.20.0 \|\| ^ v14.15.0 \|\| >= v16.13.0 |
 | v1.0.X | L | >= v6.9.0 |
 
 ## Report Vulnerability

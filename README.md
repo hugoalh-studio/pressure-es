@@ -18,30 +18,16 @@
 
 A NodeJS module to convert pressure units.
 
-Units of pressure are from [Wikipedia - Pressure measurement - Units](https://en.wikipedia.org/wiki/Pressure_measurement#Units).
+Units of pressure are from "[Wikipedia - Pressure measurement - Units](https://en.wikipedia.org/wiki/Pressure_measurement#Units)".
 
-| **Unit** | **Symbol (\*: Exclusive)** | **Camel Case Name** |
-|:-:|:-:|:-:|
-| Pascal ***\[SI\]*** | `Pa` | `Pascal` / `pascal` |
-| Bar | `bar` | `Bar` / `bar` |
-| Pound per square inch | `psi` | `PoundPerSquareInch` / `poundPerSquareInch` |
-| Standard atmosphere | `atm` | `Atmosphere` / `atmosphere` / `StandardAtmosphere` / `standardAtmosphere` |
-| Technical atmosphere | `at` | `TechnicalAtmosphere` / `technicalAtmosphere` |
-| Torr | `Torr` | `Torr` / `torr` |
-
-<details>
-<summary><b>Conversion Formula</b></summary>
-
-| **Unit** | **To SI Unit** | **From SI Unit** |
-|:-:|:--|:--|
-| Pascal ***\[SI\]*** |  |  |
-| Bar | $P_{Pa} = P_{bar} \times 10^{5}$ | $P_{bar} = P_{Pa} \div 10^{5}$ |
-| Pound per square inch | $P_{Pa} = P_{psi} \times {0.45359237 \times 9.80665 \over 0.0254^{2}}$ | $P_{psi} = P_{Pa} \div {0.45359237 \times 9.80665 \over 0.0254^{2}}$ |
-| Standard atmosphere | $P_{Pa} = P_{atm} \times 101325$ | $P_{atm} = P_{Pa} \div 101325$ |
-| Technical atmosphere | $P_{Pa} = P_{at} \times 98066.5$ | $P_{at} = P_{Pa} \div 98066.5$ |
-| Torr | $P_{Pa} = P_{Torr} \times {101325 \over 760}$ | $P_{Torr} = P_{Pa} \div {101325 \over 760}$ |
-
-</details>
+|  | **Name ASCII** | **Name Standard** | **Symbol ASCII** | **Symbol Standard** | **... (\*: Exclusive)** |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|  ***\[SI\]*** **Pascal**  | `Pascal` | `Pascal` | `Pa` | `Pa` |  |
+| **Bar** | `Bar` | `Bar` | `bar` | `bar` |  |
+| **Pound Per Square Inch** | `PoundPerSquareInch` | `Pound Per Square Inch` | `psi` | `psi` |  |
+| **Standard Atmosphere** | `StandardAtmosphere` | `Standard Atmosphere` | `atm` | `atm` |  |
+| **Technical Atmosphere** | `TechnicalAtmosphere` | `Technical Atmosphere` | `at` | `at` |  |
+| **Torr** | `Torr` | `Torr` | `Torr` | `Torr` |  |
 
 ### 📋 Notice
 
@@ -63,7 +49,7 @@ In most cases, round-off errors do not matter, they have no significant impact o
 
 ### Getting Started
 
-- NodeJS >= v6.9.0
+- NodeJS ^ v12.20.0 \|\| ^ v14.15.0 \|\| >= v16.13.0
 
 ```sh
 npm install @hugoalh/pressure
@@ -71,32 +57,49 @@ npm install @hugoalh/pressure
 
 ```js
 /* Either */
-const Pressure = require("@hugoalh/pressure");// [CommonJS] Require
-import Pressure from "@hugoalh/pressure";// [ModuleJS] Default Import
+import { ... } from "@hugoalh/pressure";// Named Import
+import * as pressure from "@hugoalh/pressure";// Namespace Import
+import Pressure from "@hugoalh/pressure";// Default Import (Class `Pressure`)
 ```
 
 ### API
 
 #### Class
 
-```ts
-new Pressure(value: number, unit: string = "Pa"): Pressure;
-  .at: number;
-  .atm: number;
-  .bar: number;
-  .Pa: number;
-  .psi: number;
-  .Torr: number;
+- ```ts
+  new Pressure(value: number, unit: PressureUnits | string = "Pa"): Pressure;
+    .toJSON(keyType: PressureToJSONKeyType = "symbolASCII"): { [x: string]: number; };// Get all of the units value.
+    .toStringASCII(unit: PressureUnits | string = "Pa"): string;// Get unit's value with ASCII symbol.
+    .toStringStandard(unit: PressureUnits | string = "Pa"): string;// Get unit's value with Standard symbol.
+    .toValue(unit: PressureUnits | string = "Pa"): number;// Get unit's value.
+  
+  Pressure.difference(a: Pressure, b: Pressure): PressureDifference;// Calculate pressure difference by units.
+  Pressure.unit(unit: PressureUnits | string): PressureUnitMeta;// Get a pressure unit meta.
+  Pressure.units(): PressureUnitMeta[];// Get all of the pressure units meta.
+  Pressure.unitSI(): PressureUnitMeta;// Get pressure SI unit meta.
+  ```
 
-Pressure.difference(a: Pressure, b: Pressure): PressureDifference;
-```
+#### Interface / Type
+
+- ```ts
+  type PressureToJSONKeyType = "nameASCII" | "nameStandard" | "symbolASCII" | "symbolStandard";
+  ```
+- ```ts
+  type PressureUnitMeta = {
+    isSIUnit: boolean;
+    nameASCII: string;
+    nameStandard: string;
+    symbolASCII: string;
+    symbolStandard: string;
+  };
+  ```
 
 ### Example
 
 ```js
-new Pressure(1, "Bar").Pa;
+new Pressure(1, "Bar").toValue("Pa");
 //=> 100000
 
-new Pressure(100000).Bar;
+new Pressure(100000).toValue("Bar");
 //=> 1
 ```
