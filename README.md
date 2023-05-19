@@ -99,13 +99,19 @@ import Pressure from "@hugoalh/pressure";// Default Import (Class `Pressure`)
 ```js
 new Pressure(1, "Bar").toValue("Pa");
 //=> 100000
+```
 
+```js
 new Pressure(1, "Bar").toStringStandard("Pa");
 //=> "100000 Pa"
+```
 
+```js
 new Pressure(100000).toValue("Bar");
 //=> 1
+```
 
+```js
 new Pressure(100000).toStringStandard("Bar");
 //=> "1 bar"
 ```
