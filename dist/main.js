@@ -119,7 +119,7 @@ const toJSONKeyType = [
 /**
  * @access private
  * @function unitResolver
- * @param {PressureUnits | string} unit Unit.
+ * @param {PressureUnits} unit Unit.
  * @returns {PressureUnitMetaInternal} Unit meta.
  */
 function unitResolver(unit) {
@@ -158,7 +158,7 @@ class Pressure {
      * @static
      * @method unit
      * @description Get a pressure unit meta.
-     * @param {PressureUnits | string} unit Unit.
+     * @param {PressureUnits} unit Unit.
      * @returns {PressureUnitMeta} Unit meta.
      */
     static unit(unit) {
@@ -206,7 +206,7 @@ class Pressure {
     /**
      * @constructor
      * @param {number} value Value.
-     * @param {PressureUnits | string} [unit="Pa"] Unit.
+     * @param {PressureUnits} [unit="Pa"] Unit.
      */
     constructor(value, unit = "Pa") {
         _Pressure_table.set(this, new Map());
@@ -243,7 +243,7 @@ class Pressure {
     /**
      * @method toStringASCII
      * @description Get unit's value with ASCII symbol.
-     * @param {PressureUnits | string} [unit="Pa"] Unit.
+     * @param {PressureUnits} [unit="Pa"] Unit.
      * @returns {string}
      */
     toStringASCII(unit = "Pa") {
@@ -253,7 +253,7 @@ class Pressure {
     /**
      * @method toStringStandard
      * @description Get unit's value with Standard symbol.
-     * @param {PressureUnits | string} [unit="Pa"] Unit.
+     * @param {PressureUnits} [unit="Pa"] Unit.
      * @returns {string}
      */
     toStringStandard(unit = "Pa") {
@@ -263,7 +263,7 @@ class Pressure {
     /**
      * @method toValue
      * @description Get unit's value.
-     * @param {PressureUnits | string} [unit="Pa"] Unit.
+     * @param {PressureUnits} [unit="Pa"] Unit.
      * @returns {number}
      */
     toValue(unit = "Pa") {
@@ -312,7 +312,7 @@ class PressureDifference {
     /**
      * @method toStringASCII
      * @description Get unit's value with ASCII symbol.
-     * @param {PressureUnits | string} [unit="Pa"] Unit.
+     * @param {PressureUnits} [unit="Pa"] Unit.
      * @returns {string}
      */
     toStringASCII(unit = "Pa") {
@@ -322,7 +322,7 @@ class PressureDifference {
     /**
      * @method toStringStandard
      * @description Get unit's value with Standard symbol.
-     * @param {PressureUnits | string} [unit="Pa"] Unit.
+     * @param {PressureUnits} [unit="Pa"] Unit.
      * @returns {string}
      */
     toStringStandard(unit = "Pa") {
@@ -332,7 +332,7 @@ class PressureDifference {
     /**
      * @method toValue
      * @description Get unit's value.
-     * @param {PressureUnits | string} [unit="Pa"] Unit.
+     * @param {PressureUnits} [unit="Pa"] Unit.
      * @returns {number}
      */
     toValue(unit = "Pa") {

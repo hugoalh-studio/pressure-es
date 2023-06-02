@@ -131,10 +131,10 @@ const toJSONKeyType: PressureToJSONKeyType[] = [
 /**
  * @access private
  * @function unitResolver
- * @param {PressureUnits | string} unit Unit.
+ * @param {PressureUnits} unit Unit.
  * @returns {PressureUnitMetaInternal} Unit meta.
  */
-function unitResolver(unit: PressureUnits | string): PressureUnitMetaInternal {
+function unitResolver(unit: PressureUnits): PressureUnitMetaInternal {
 	if (typeof unit !== "string") {
 		throw new TypeError(`Argument \`unit\` must be type of string!`);
 	}
@@ -172,10 +172,10 @@ class Pressure {
 	 * @static
 	 * @method unit
 	 * @description Get a pressure unit meta.
-	 * @param {PressureUnits | string} unit Unit.
+	 * @param {PressureUnits} unit Unit.
 	 * @returns {PressureUnitMeta} Unit meta.
 	 */
-	static unit(unit: PressureUnits | string): PressureUnitMeta {
+	static unit(unit: PressureUnits): PressureUnitMeta {
 		let unitResolve: PressureUnitMetaInternal = unitResolver(unit);
 		return {
 			nameASCII: unitResolve.nameASCII,
@@ -222,9 +222,9 @@ class Pressure {
 	/**
 	 * @constructor
 	 * @param {number} value Value.
-	 * @param {PressureUnits | string} [unit="Pa"] Unit.
+	 * @param {PressureUnits} [unit="Pa"] Unit.
 	 */
-	constructor(value: number, unit: PressureUnits | string = "Pa") {
+	constructor(value: number, unit: PressureUnits = "Pa") {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
 			throw new TypeError(`Argument \`value\` must be type of number!`);
 		}
@@ -258,30 +258,30 @@ class Pressure {
 	/**
 	 * @method toStringASCII
 	 * @description Get unit's value with ASCII symbol.
-	 * @param {PressureUnits | string} [unit="Pa"] Unit.
+	 * @param {PressureUnits} [unit="Pa"] Unit.
 	 * @returns {string}
 	 */
-	toStringASCII(unit: PressureUnits | string = "Pa"): string {
+	toStringASCII(unit: PressureUnits = "Pa"): string {
 		let unitResolve: PressureUnitMetaInternal = unitResolver(unit);
 		return `${this.#table.get(unitResolve.nameASCII)} ${unitResolve.symbolASCII}`;
 	}
 	/**
 	 * @method toStringStandard
 	 * @description Get unit's value with Standard symbol.
-	 * @param {PressureUnits | string} [unit="Pa"] Unit.
+	 * @param {PressureUnits} [unit="Pa"] Unit.
 	 * @returns {string}
 	 */
-	toStringStandard(unit: PressureUnits | string = "Pa"): string {
+	toStringStandard(unit: PressureUnits = "Pa"): string {
 		let unitResolve: PressureUnitMetaInternal = unitResolver(unit);
 		return `${this.#table.get(unitResolve.nameASCII)} ${unitResolve.symbolStandard}`;
 	}
 	/**
 	 * @method toValue
 	 * @description Get unit's value.
-	 * @param {PressureUnits | string} [unit="Pa"] Unit.
+	 * @param {PressureUnits} [unit="Pa"] Unit.
 	 * @returns {number}
 	 */
-	toValue(unit: PressureUnits | string = "Pa"): number {
+	toValue(unit: PressureUnits = "Pa"): number {
 		return this.#table.get(unitResolver(unit).nameASCII);
 	}
 }
@@ -326,30 +326,30 @@ class PressureDifference {
 	/**
 	 * @method toStringASCII
 	 * @description Get unit's value with ASCII symbol.
-	 * @param {PressureUnits | string} [unit="Pa"] Unit.
+	 * @param {PressureUnits} [unit="Pa"] Unit.
 	 * @returns {string}
 	 */
-	toStringASCII(unit: PressureUnits | string = "Pa"): string {
+	toStringASCII(unit: PressureUnits = "Pa"): string {
 		let unitResolve: PressureUnitMetaInternal = unitResolver(unit);
 		return `${this.#table.get(unitResolve.nameASCII)} ${unitResolve.symbolASCII}`;
 	}
 	/**
 	 * @method toStringStandard
 	 * @description Get unit's value with Standard symbol.
-	 * @param {PressureUnits | string} [unit="Pa"] Unit.
+	 * @param {PressureUnits} [unit="Pa"] Unit.
 	 * @returns {string}
 	 */
-	toStringStandard(unit: PressureUnits | string = "Pa"): string {
+	toStringStandard(unit: PressureUnits = "Pa"): string {
 		let unitResolve: PressureUnitMetaInternal = unitResolver(unit);
 		return `${this.#table.get(unitResolve.nameASCII)} ${unitResolve.symbolStandard}`;
 	}
 	/**
 	 * @method toValue
 	 * @description Get unit's value.
-	 * @param {PressureUnits | string} [unit="Pa"] Unit.
+	 * @param {PressureUnits} [unit="Pa"] Unit.
 	 * @returns {number}
 	 */
-	toValue(unit: PressureUnits | string = "Pa"): number {
+	toValue(unit: PressureUnits = "Pa"): number {
 		return this.#table.get(unitResolver(unit).nameASCII);
 	}
 }

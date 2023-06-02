@@ -67,14 +67,14 @@ import Pressure from "@hugoalh/pressure";// Default Import (Class `Pressure`)
 #### Class
 
 - ```ts
-  new Pressure(value: number, unit: PressureUnits | string = "Pa"): Pressure;
+  new Pressure(value: number, unit: PressureUnits = "Pa"): Pressure;
     .toJSON(keyType: PressureToJSONKeyType = "symbolASCII"): { [x: string]: number; };// Get all of the units value.
-    .toStringASCII(unit: PressureUnits | string = "Pa"): string;// Get unit's value with ASCII symbol.
-    .toStringStandard(unit: PressureUnits | string = "Pa"): string;// Get unit's value with Standard symbol.
-    .toValue(unit: PressureUnits | string = "Pa"): number;// Get unit's value.
+    .toStringASCII(unit: PressureUnits = "Pa"): string;// Get unit's value with ASCII symbol.
+    .toStringStandard(unit: PressureUnits = "Pa"): string;// Get unit's value with Standard symbol.
+    .toValue(unit: PressureUnits = "Pa"): number;// Get unit's value.
   
   Pressure.difference(a: Pressure, b: Pressure): PressureDifference;// Calculate pressure difference by units.
-  Pressure.unit(unit: PressureUnits | string): PressureUnitMeta;// Get a pressure unit meta.
+  Pressure.unit(unit: PressureUnits): PressureUnitMeta;// Get a pressure unit meta.
   Pressure.units(): PressureUnitMeta[];// Get all of the pressure units meta.
   Pressure.unitSI(): PressureUnitMeta;// Get pressure SI unit meta.
   ```
