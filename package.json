@@ -17,8 +17,12 @@
 	},
 	"license": "MIT",
 	"author": "hugoalh",
-	"main": "./lib/main.js",
-	"types": "./lib/main.d.ts",
+	"type": "module",
+	"main": "./dist/main.js",
+	"exports": {
+		"import": "./dist/main.js"
+	},
+	"types": "./dist/main.d.ts",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/hugoalh-studio/pressure-nodejs.git"
