@@ -1,10 +1,10 @@
-type PressureUnitMeta = {
+interface PressureUnitMeta {
     isSIUnit: boolean;
     nameASCII: string;
     nameStandard: string;
     symbolASCII: string;
     symbolStandard: string;
-};
+}
 declare const pressureUnitsMap: readonly [{
     readonly nameASCII: "Pascal";
     readonly nameStandard: "Pascal";

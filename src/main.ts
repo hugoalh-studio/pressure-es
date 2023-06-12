@@ -1,16 +1,16 @@
-type PressureUnitMeta = {
+interface PressureUnitMeta {
 	isSIUnit: boolean;
 	nameASCII: string;
 	nameStandard: string;
 	symbolASCII: string;
 	symbolStandard: string;
-};
-type PressureUnitMetaInternal = PressureUnitMeta & {
+}
+interface PressureUnitMetaInternal extends PressureUnitMeta {
 	convertFromSI: (valueSI: number) => number;
 	convertToSI: (valueCurrent: number) => number;
 	nameRegExp: RegExp;
 	symbolRegExp: RegExp;
-};
+}
 /*
 [FOR DEVELOPERS]
 

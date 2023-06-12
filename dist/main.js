@@ -1,12 +1,9 @@
-"use strict";
 var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (receiver, state, kind, f) {
     if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
     if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
     return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
 var _a, _Pressure_table, _PressureDifference_table;
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Pressure = void 0;
 /*
 [FOR DEVELOPERS]
 
@@ -270,7 +267,6 @@ class Pressure {
         return __classPrivateFieldGet(this, _Pressure_table, "f").get(unitResolver(unit).nameASCII);
     }
 }
-exports.Pressure = Pressure;
 _a = Pressure, _Pressure_table = new WeakMap();
 /** @alias difference */ Pressure.diff = _a.difference;
 /**
@@ -340,4 +336,5 @@ class PressureDifference {
     }
 }
 _PressureDifference_table = new WeakMap();
-exports.default = Pressure;
+export default Pressure;
+export { Pressure };

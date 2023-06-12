@@ -85,7 +85,7 @@ import Pressure from "@hugoalh/pressure";// Default Import (Class `Pressure`)
   type PressureToJSONKeyType = "nameASCII" | "nameStandard" | "symbolASCII" | "symbolStandard";
   ```
 - ```ts
-  type PressureUnitMeta = {
+  interface PressureUnitMeta {
     isSIUnit: boolean;
     nameASCII: string;
     nameStandard: string;
