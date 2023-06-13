@@ -91,7 +91,7 @@ import Pressure from "@hugoalh/pressure";// Default Import (Class `Pressure`)
     nameStandard: string;
     symbolASCII: string;
     symbolStandard: string;
-  };
+  }
   ```
 
 ### Example
