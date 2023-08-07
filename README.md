@@ -1,20 +1,11 @@
 # Pressure (NodeJS)
 
-![License](https://img.shields.io/static/v1?label=License&message=MIT&style=flat-square "License")
-[![GitHub Repository](https://img.shields.io/badge/Repository-181717?logo=github&logoColor=ffffff&style=flat-square "GitHub Repository")](https://github.com/hugoalh-studio/pressure-nodejs)
-[![GitHub Stars](https://img.shields.io/github/stars/hugoalh-studio/pressure-nodejs?label=Stars&logo=github&logoColor=ffffff&style=flat-square "GitHub Stars")](https://github.com/hugoalh-studio/pressure-nodejs/stargazers)
-[![GitHub Contributors](https://img.shields.io/github/contributors/hugoalh-studio/pressure-nodejs?label=Contributors&logo=github&logoColor=ffffff&style=flat-square "GitHub Contributors")](https://github.com/hugoalh-studio/pressure-nodejs/graphs/contributors)
-[![GitHub Issues](https://img.shields.io/github/issues-raw/hugoalh-studio/pressure-nodejs?label=Issues&logo=github&logoColor=ffffff&style=flat-square "GitHub Issues")](https://github.com/hugoalh-studio/pressure-nodejs/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr-raw/hugoalh-studio/pressure-nodejs?label=Pull%20Requests&logo=github&logoColor=ffffff&style=flat-square "GitHub Pull Requests")](https://github.com/hugoalh-studio/pressure-nodejs/pulls)
-[![GitHub Discussions](https://img.shields.io/github/discussions/hugoalh-studio/pressure-nodejs?label=Discussions&logo=github&logoColor=ffffff&style=flat-square "GitHub Discussions")](https://github.com/hugoalh-studio/pressure-nodejs/discussions)
-[![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/hugoalh-studio/pressure-nodejs?label=Grade&logo=codefactor&logoColor=ffffff&style=flat-square "CodeFactor Grade")](https://www.codefactor.io/repository/github/hugoalh-studio/pressure-nodejs)
+[![License](https://img.shields.io/badge/License-MIT-808080?style=flat-square "License")](./LICENSE.md)
 
-| **Releases** | **Latest** (![GitHub Latest Release Date](https://img.shields.io/github/release-date/hugoalh-studio/pressure-nodejs?label=&style=flat-square "GitHub Latest Release Date")) | **Pre** (![GitHub Latest Pre-Release Date](https://img.shields.io/github/release-date-pre/hugoalh-studio/pressure-nodejs?label=&style=flat-square "GitHub Latest Pre-Release Date")) |
-|:-:|:-:|:-:|
-| [![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=ffffff&style=flat-square "GitHub")](https://github.com/hugoalh-studio/pressure-nodejs/releases) ![GitHub Total Downloads](https://img.shields.io/github/downloads/hugoalh-studio/pressure-nodejs/total?label=&style=flat-square "GitHub Total Downloads") | ![GitHub Latest Release Version](https://img.shields.io/github/release/hugoalh-studio/pressure-nodejs?sort=semver&label=&style=flat-square "GitHub Latest Release Version") | ![GitHub Latest Pre-Release Version](https://img.shields.io/github/release/hugoalh-studio/pressure-nodejs?include_prereleases&sort=semver&label=&style=flat-square "GitHub Latest Pre-Release Version") |
-| [![NPM](https://img.shields.io/badge/NPM-CB3837?logo=npm&logoColor=ffffff&style=flat-square "NPM")](https://www.npmjs.com/package/@hugoalh/pressure) ![NPM Total Downloads](https://img.shields.io/npm/dt/@hugoalh/pressure?label=&style=flat-square "NPM Total Downloads") | ![NPM Latest Release Version](https://img.shields.io/npm/v/@hugoalh/pressure/latest?label=&style=flat-square "NPM Latest Release Version") | ![NPM Latest Pre-Release Version](https://img.shields.io/npm/v/@hugoalh/pressure/pre?label=&style=flat-square "NPM Latest Pre-Release Version") |
-
-## 📝 Description
+|  | **Heat** | **Release - Latest** | **Release - Pre** |
+|:-:|:-:|:-:|:-:|
+| [![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=ffffff&style=flat-square "GitHub")](https://github.com/hugoalh-studio/pressure-nodejs) | [![GitHub Stars](https://img.shields.io/github/stars/hugoalh-studio/pressure-nodejs?label=&logoColor=ffffff&style=flat-square "GitHub Stars")](https://github.com/hugoalh-studio/pressure-nodejs/stargazers) \| ![GitHub Total Downloads](https://img.shields.io/github/downloads/hugoalh-studio/pressure-nodejs/total?label=&style=flat-square "GitHub Total Downloads") | ![GitHub Latest Release Version](https://img.shields.io/github/release/hugoalh-studio/pressure-nodejs?sort=semver&label=&style=flat-square "GitHub Latest Release Version") (![GitHub Latest Release Date](https://img.shields.io/github/release-date/hugoalh-studio/pressure-nodejs?label=&style=flat-square "GitHub Latest Release Date")) | ![GitHub Latest Pre-Release Version](https://img.shields.io/github/release/hugoalh-studio/pressure-nodejs?include_prereleases&sort=semver&label=&style=flat-square "GitHub Latest Pre-Release Version") (![GitHub Latest Pre-Release Date](https://img.shields.io/github/release-date-pre/hugoalh-studio/pressure-nodejs?label=&style=flat-square "GitHub Latest Pre-Release Date")) |
+| [![NPM](https://img.shields.io/badge/NPM-CB3837?logo=npm&logoColor=ffffff&style=flat-square "NPM")](https://www.npmjs.com/package/@hugoalh/pressure) | ![NPM Total Downloads](https://img.shields.io/npm/dt/@hugoalh/pressure?label=&style=flat-square "NPM Total Downloads") | ![NPM Latest Release Version](https://img.shields.io/npm/v/@hugoalh/pressure/latest?label=&style=flat-square "NPM Latest Release Version") | ![NPM Latest Pre-Release Version](https://img.shields.io/npm/v/@hugoalh/pressure/pre?label=&style=flat-square "NPM Latest Pre-Release Version") |
 
 A NodeJS module to convert pressure units.
 
@@ -29,7 +20,7 @@ Units of pressure are from "[Wikipedia - Pressure measurement - Units](https://e
 | **Technical Atmosphere** | `TechnicalAtmosphere` | `Technical Atmosphere` | `at` | `at` |  |
 | **Torr** | `Torr` | `Torr` | `Torr` | `Torr` |  |
 
-### 📋 Notice
+## 📋 Notice
 
 This module uses the built in JavaScript `Number` type, which is a floating point number with a limited precision of 64 bits, about 16 digits. Floating point numbers round-off errors can occur during calculations:
 
@@ -45,7 +36,7 @@ In most cases, round-off errors do not matter, they have no significant impact o
 //=> 0.3
 ```
 
-## 📚 Documentation
+## 📓 Documentation
 
 ### Getting Started
 
@@ -96,22 +87,19 @@ import Pressure from "@hugoalh/pressure";// Default Import (Class `Pressure`)
 
 ### Example
 
-```js
-new Pressure(1, "Bar").toValue("Pa");
-//=> 100000
-```
-
-```js
-new Pressure(1, "Bar").toStringStandard("Pa");
-//=> "100000 Pa"
-```
-
-```js
-new Pressure(100000).toValue("Bar");
-//=> 1
-```
-
-```js
-new Pressure(100000).toStringStandard("Bar");
-//=> "1 bar"
-```
+- ```js
+  new Pressure(1, "Bar").toValue("Pa");
+  //=> 100000
+  ```
+- ```js
+  new Pressure(1, "Bar").toStringStandard("Pa");
+  //=> "100000 Pa"
+  ```
+- ```js
+  new Pressure(100000).toValue("Bar");
+  //=> 1
+  ```
+- ```js
+  new Pressure(100000).toStringStandard("Bar");
+  //=> "1 bar"
+  ```
