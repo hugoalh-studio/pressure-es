@@ -21,7 +21,7 @@ Units of pressure are from "[Wikipedia - Pressure measurement - Units](https://e
 | **Technical Atmosphere** | `TechnicalAtmosphere` | `Technical Atmosphere` | `at` | `at` |  |
 | **Torr** | `Torr` | `Torr` | `Torr` | `Torr` |  |
 
-## 📋 Notice
+## ⚠️ Important
 
 This module uses the built in JavaScript `Number` type, which is a floating point number with a limited precision of 64 bits, about 16 digits. Floating point numbers round-off errors can occur during calculations:
 
@@ -37,42 +37,57 @@ In most cases, round-off errors do not matter, they have no significant impact o
 //=> 0.3
 ```
 
-## 📓 Documentation
+## 🔰 Begin
 
-### Getting Started
+### Bun
 
-- NodeJS ^ v12.20.0 \|\| ^ v14.15.0 \|\| >= v16.13.0
+> **🧪 Experimental:** Bun is still under development.
 
-```sh
-npm install @hugoalh/pressure
-```
+- **Target Version:** ^ v1.0.0, &:
+  - TypeScript >= v5.1.0 *\[Development\]*
+- **Require Permission:** *N/A*
+- **Domain/Registry:**
+  - [NPM](https://www.npmjs.com/package/@hugoalh/pressure)
+    ```sh
+    bun add @hugoalh/pressure
+    ```
+    ```js
+    import ... from "@hugoalh/pressure[@<Tag>]";
+    ```
 
-```js
-/* Either */
-import { ... } from "@hugoalh/pressure";// Named Import
-import * as pressure from "@hugoalh/pressure";// Namespace Import
-import Pressure from "@hugoalh/pressure";// Default Import (Class `Pressure`)
-```
+> **ℹ️ Notice:** It is also able to import part of the module with sub path if available, see [file `package.json`](./package.json) property `exports` for available sub paths.
 
-### API
+### NodeJS
 
-#### Class
+- **Target Version:** ^ v12.20.0 \|\| ^ v14.15.0 \|\| >= v16.13.0, &:
+  - TypeScript >= v5.1.0 *\[Development\]*
+- **Require Permission:** *N/A*
+- **Domain/Registry:**
+  - [NPM](https://www.npmjs.com/package/@hugoalh/pressure)
+    ```sh
+    npm install @hugoalh/pressure
+    ```
+    ```js
+    import ... from "@hugoalh/pressure";
+    ```
+
+> **ℹ️ Notice:** It is also able to import part of the module with sub path if available, see [file `package.json`](./package.json) property `exports` for available sub paths.
+
+## 🧩 API
 
 - ```ts
-  new Pressure(value: number, unit: PressureUnits = "Pa"): Pressure;
-    .toJSON(keyType: PressureToJSONKeyType = "symbolASCII"): { [x: string]: number; };// Get all of the units value.
-    .toStringASCII(unit: PressureUnits = "Pa"): string;// Get unit's value with ASCII symbol.
-    .toStringStandard(unit: PressureUnits = "Pa"): string;// Get unit's value with Standard symbol.
-    .toValue(unit: PressureUnits = "Pa"): number;// Get unit's value.
-  
-  Pressure.difference(a: Pressure, b: Pressure): PressureDifference;// Calculate pressure difference by units.
-  Pressure.unit(unit: PressureUnits): PressureUnitMeta;// Get a pressure unit meta.
-  Pressure.units(): PressureUnitMeta[];// Get all of the pressure units meta.
-  Pressure.unitSI(): PressureUnitMeta;// Get pressure SI unit meta.
+  class Pressure{
+    constructor(value: number, unit: PressureUnits = "Pa"): Pressure;
+    toJSON(keyType: PressureToJSONKeyType = "symbolASCII"): { [x: string]: number; };// Get all of the units value.
+    toStringASCII(unit: PressureUnits = "Pa"): string;// Get unit's value with ASCII symbol.
+    toStringStandard(unit: PressureUnits = "Pa"): string;// Get unit's value with Standard symbol.
+    toValue(unit: PressureUnits = "Pa"): number;// Get unit's value.
+    static difference(a: Pressure, b: Pressure): PressureDifference;// Calculate pressure difference by units.
+    static unit(unit: PressureUnits): PressureUnitMeta;// Get a pressure unit meta.
+    static units(): PressureUnitMeta[];// Get all of the pressure units meta.
+    static unitSI(): PressureUnitMeta;// Get pressure SI unit meta.
+  }
   ```
-
-#### Interface / Type
-
 - ```ts
   type PressureToJSONKeyType = "nameASCII" | "nameStandard" | "symbolASCII" | "symbolStandard";
   ```
@@ -86,21 +101,22 @@ import Pressure from "@hugoalh/pressure";// Default Import (Class `Pressure`)
   }
   ```
 
-### Example
+> **ℹ️ Notice:** Documentation is included inside the script file.
+
+## ✍️ Example
 
 - ```js
+  import { Pressure } from "@hugoalh/pressure";
+
   new Pressure(1, "Bar").toValue("Pa");
   //=> 100000
-  ```
-- ```js
+
   new Pressure(1, "Bar").toStringStandard("Pa");
   //=> "100000 Pa"
-  ```
-- ```js
+
   new Pressure(100000).toValue("Bar");
   //=> 1
-  ```
-- ```js
+
   new Pressure(100000).toStringStandard("Bar");
   //=> "1 bar"
   ```
