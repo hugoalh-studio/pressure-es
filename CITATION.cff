@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://citation-file-format.github.io/1.2.0/schema.json
+cff-version: "1.2.0"
+title: "Pressure (ES)"
+message: "If you use this software, please cite it using the metadata from this file."
+type: "software"
+authors:
+  - name: "hugoalh Studio"
+repository-code: "https://github.com/hugoalh-studio/pressure-es"
+keywords:
+  - "conversion"
+  - "convert"
+  - "es"
+  - "javascript"
+  - "js"
+  - "modulejs"
+  - "pressure"
+  - "scale"
+  - "scales"
+  - "ts"
+  - "typescript"
+  - "unit"
+  - "units"
+license: "MIT"

@@ -1,0 +1,32 @@
+// This file is only for JSR related, non-JSR related must set in the file `deno.jsonc`!
+{
+	"name": "@hugoalh/pressure",
+	"version": "3.0.0-beta.1",
+	"exports": {
+		".": "./mod.ts"
+	},
+	"imports": { },
+	"publish": {
+		"exclude": [
+			"**/*_bench.ts",
+			"**/*_bench.tsx",
+			"**/*_test.ts",
+			"**/*_test.tsx",
+			"**/*.bench.ts",
+			"**/*.bench.tsx",
+			"**/*.test.ts",
+			"**/*.test.tsx",
+			"**/bench.ts",
+			"**/bench.tsx",
+			"**/test.ts",
+			"**/test.tsx"
+		],
+		"include": [
+			"**/*.ts",
+			"**/*.tsx",
+			"jsr.jsonc",
+			"LICENSE*.md",
+			"README*.md"
+		]
+	}
+}
