@@ -1,4 +1,4 @@
-import { assertEquals } from "TEST/assert_equals.ts";
+import { assertEquals } from "STD/assert/assert_equals.ts";
 import { Pressure } from "./mod.ts";
 Deno.test("Conversion 1", { permissions: "none" }, async (t) => {
 	const pressureFromBar = new Pressure(1, "Bar");
