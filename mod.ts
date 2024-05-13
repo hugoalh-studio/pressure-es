@@ -121,23 +121,24 @@ export interface PressureUnitMeta {
 /**
  * Resolve unit input as ASCII symbol of the unit.
  * @access private
- * @param {string} unitInput Unit input.
+ * @param {string} parameterName Name of the parameter.
+ * @param {string} value Unit input.
  * @returns {PressureUnitsSymbolASCII} ASCII symbol of the unit.
  */
-function resolveUnitInput(unitInput: string): PressureUnitsSymbolASCII {
+function resolveUnitInput(parameterName: string, value: string): PressureUnitsSymbolASCII {
 	for (const [unitSymbolASCII, unitSymbols] of Object.entries(unitsSymbols)) {
 		const unitNames = unitsNames[unitSymbolASCII as PressureUnitsSymbolASCII];
 		if (
-			unitInput === unitSymbolASCII ||
+			value === unitSymbolASCII ||
 			//@ts-ignore Type conflict not exist.
-			unitSymbols.includes(unitInput) ||
+			unitSymbols.includes(value) ||
 			//@ts-ignore Type conflict not exist.
-			unitNames.includes(unitInput)
+			unitNames.includes(value)
 		) {
 			return unitSymbolASCII as PressureUnitsSymbolASCII;
 		}
 	}
-	throw new SyntaxError(`\`${unitInput}\` is not a known pressure unit!`);
+	throw new SyntaxError(`\`${value}\` (parameter \`${parameterName}\`) is not a known pressure unit!`);
 }
 /**
  * Convert between units of the pressure.
@@ -150,9 +151,9 @@ export class Pressure {
 	 */
 	constructor(fromValue: number, fromUnit: PressureUnitsInput = "Pa") {
 		if (!(typeof fromValue === "number" && !Number.isNaN(fromValue))) {
-			throw new TypeError(`Argument \`fromValue\` must be type of number!`);
+			throw new TypeError(`\`${fromValue}\` (parameter \`fromValue\`) is not a number!`);
 		}
-		const fromUnitSymbolASCII: PressureUnitsSymbolASCII = resolveUnitInput(fromUnit);
+		const fromUnitSymbolASCII: PressureUnitsSymbolASCII = resolveUnitInput("fromUnit", fromUnit);
 		this.#table.set(fromUnitSymbolASCII, fromValue);
 		if (fromUnitSymbolASCII !== unitSISymbolASCII) {
 			this.#table.set(unitSISymbolASCII, unitsConverters[fromUnitSymbolASCII].toSI(fromValue));
@@ -176,7 +177,7 @@ export class Pressure {
 	 * @returns {string} Value of the unit with standard symbol.
 	 */
 	toString(toUnit: PressureUnitsInput = "Pa"): string {
-		const toUnitSymbolASCII: PressureUnitsSymbolASCII = resolveUnitInput(toUnit);
+		const toUnitSymbolASCII: PressureUnitsSymbolASCII = resolveUnitInput("toUnit", toUnit);
 		return `${this.#table.get(toUnitSymbolASCII)!} ${unitsSymbols[toUnitSymbolASCII][0]}`;
 	}
 	/**
@@ -185,7 +186,7 @@ export class Pressure {
 	 * @returns {number} Value of the unit.
 	 */
 	toValue(toUnit: PressureUnitsInput = "Pa"): number {
-		return this.#table.get(resolveUnitInput(toUnit))!;
+		return this.#table.get(resolveUnitInput("toUnit", toUnit))!;
 	}
 	/**
 	 * Get meta of the unit.
@@ -193,7 +194,7 @@ export class Pressure {
 	 * @returns {PressureUnitMeta} Meta of the unit.
 	 */
 	static unit(unit: PressureUnitsInput = "Pa"): PressureUnitMeta {
-		const unitSymbolASCII: PressureUnitsSymbolASCII = resolveUnitInput(unit);
+		const unitSymbolASCII: PressureUnitsSymbolASCII = resolveUnitInput("unit", unit);
 		return {
 			isSIUnit: unitSymbolASCII === unitSISymbolASCII,
 			names: [...unitsNames[unitSymbolASCII as PressureUnitsSymbolASCII] as unknown as string[]],
