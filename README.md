@@ -3,7 +3,7 @@
 [**⚖️** MIT](./LICENSE.md)
 
 [![GitHub: hugoalh-studio/pressure-es](https://img.shields.io/github/v/release/hugoalh-studio/pressure-es?label=hugoalh-studio/pressure-es&labelColor=181717&logo=github&logoColor=ffffff&sort=semver&style=flat "GitHub: hugoalh-studio/pressure-es")](https://github.com/hugoalh-studio/pressure-es)
-[![JSR: @hugoalh/pressure](https://img.shields.io/jsr/v/@hugoalh/pressure?label=JSR%20@hugoalh/pressure&labelColor=F7DF1E&logoColor=000000&style=flat "JSR: @hugoalh/pressure")](https://jsr.io/@hugoalh/pressure)
+[![JSR: @hugoalh/pressure](https://img.shields.io/jsr/v/@hugoalh/pressure?label=@hugoalh/pressure&labelColor=F7DF1E&logo=jsr&logoColor=000000&style=flat "JSR: @hugoalh/pressure")](https://jsr.io/@hugoalh/pressure)
 [![NPM: @hugoalh/pressure](https://img.shields.io/npm/v/@hugoalh/pressure?label=@hugoalh/pressure&labelColor=CB3837&logo=npm&logoColor=ffffff&style=flat "NPM: @hugoalh/pressure")](https://www.npmjs.com/package/@hugoalh/pressure)
 
 An ES (JavaScript & TypeScript) module to convert between units of the pressure.
